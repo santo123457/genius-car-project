@@ -25,7 +25,7 @@ const CheckOut = () => {
       massage,
     };
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://genius-car-server-santo123457.vercel.app/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -36,10 +36,8 @@ const CheckOut = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-            alert('Order placed Successfully')
-            form.reset();
-            
-
+          alert("Order placed Successfully");
+          form.reset();
         }
       })
       .catch((err) => console.error(err));

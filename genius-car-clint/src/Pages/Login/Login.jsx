@@ -23,7 +23,7 @@ const Login = () => {
         };
         console.log(currentUser);
         //get JWT token
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://genius-car-server-santo123457.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -39,7 +39,6 @@ const Login = () => {
             localStorage.setItem("genius-token", data.token);
             navigate(from, { replace: true });
           });
-
       })
       .catch((error) => console.error(error));
   };

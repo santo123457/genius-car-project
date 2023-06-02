@@ -14,10 +14,14 @@ const Header = () => {
     <>
       <li className="font-semibold">
         <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/blogs">Blogs</Link>
+        <Link to="/contact">Contact</Link>
         {
           user?.email ? <>
           <Link to="/orders">orders</Link>
-          <button className="btn-ghost" onClick={handleSignOut}>Sign Out</button>
+          
           </>
           :
           <Link to="/login">Login</Link>
@@ -27,7 +31,7 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar mb-12 pt-12 h-20 bg-base-100">
+    <div className="navbar mb-10 pt-5 h-20 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,7 +67,42 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-orange-outline">Appointment</button>
+      <div className="navbar-end">
+          <div className="flex">
+            <div className="dropdown dropdown-end"> 
+          {
+            user?.email && <div className="dropdown dropdown-end mx-5">
+            <label
+              tabIndex={0}
+              className="btn normal-case btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg" />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+              <button className="btn-ghost" onClick={handleSignOut}>Sign Out</button>
+              </li>
+            </ul>
+          </div>
+          }
+            </div>
+            
+          </div>
+          </div>
       </div>
     </div>
   );

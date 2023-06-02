@@ -1,35 +1,38 @@
 import React, { useEffect, useState } from "react";
 
-const OrderRow = ({ order,handleDelete,handleStatusUpdate }) => {
-  const { _id,serviceName, phone, price, massage, customer, service, status } = order;
-  
+const OrderRow = ({ order, handleDelete, handleStatusUpdate }) => {
+  const { _id, serviceName, phone, price, massage, customer, service, status } =
+    order;
+
   const [orderService, setOrderService] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${service}`)
+    fetch(
+      `https://genius-car-server-santo123457.vercel.app/services/${service}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setOrderService(data);
       });
   }, [service]);
 
-  
-
   return (
     <tr>
       <th>
-        <button onClick={()=>handleDelete(_id)} className="btn btn-ghost">X</button>
+        <button onClick={() => handleDelete(_id)} className="btn btn-ghost">
+          X
+        </button>
       </th>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="rounded w-24 h-24">
-              {
-                orderService?.img && <img
-                src={orderService.img}
-                alt="Avatar Tailwind CSS Component"
-              />
-              }
+              {orderService?.img && (
+                <img
+                  src={orderService.img}
+                  alt="Avatar Tailwind CSS Component"
+                />
+              )}
             </div>
           </div>
           <div>
@@ -47,8 +50,16 @@ const OrderRow = ({ order,handleDelete,handleStatusUpdate }) => {
       </td>
       <td>${price}</td>
       <th>
-      {status ? <div className="btn btn-primary">{status}</div> :  <button onClick={()=>handleStatusUpdate(_id)} className="btn btn-orange btn-xs">pending</button>}
-        
+        {status ? (
+          <div className="btn btn-primary">{status}</div>
+        ) : (
+          <button
+            onClick={() => handleStatusUpdate(_id)}
+            className="btn btn-orange btn-xs"
+          >
+            pending
+          </button>
+        )}
       </th>
     </tr>
   );

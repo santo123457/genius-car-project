@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
-import ServiceCard from "./ServiceCard";
+import React, { useEffect, useState } from 'react';
+import ServiceCard from '../Home/Services/ServiceCard';
 
 const Services = () => {
-  const [services, setServices] = useState([]);
-  useEffect(() => {
-    fetch("https://genius-car-server-santo123457.vercel.app/services")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
-  return (
-    <div>
+    const [services, setServices] = useState([]);
+    useEffect(() => {
+      fetch("https://genius-car-server-santo123457.vercel.app/services")
+        .then((res) => res.json())
+        .then((data) => setServices(data));
+    }, []);
+    return (
+        <div> 
+            <div>
       <div className="text-center">
-        <p className="text-2xl font-bold text-orange-600">Services</p>
-        <h2 className="text-5xl font-semibold">Our Service Area</h2>
+        
+        <h2 className="text-5xl font-semibold">Our All Service </h2>
         <p className="py-5">
           the majority have suffered alteration in some form, by injected
           humour, or randomised <br />
@@ -28,7 +29,8 @@ const Services = () => {
         More Services
       </button>
     </div>
-  );
+        </div>
+    );
 };
 
 export default Services;

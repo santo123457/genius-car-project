@@ -1,6 +1,7 @@
 import React from "react";
 import parsons from "../../../assets/images/about_us/person.jpg"
 import parts from "../../../assets/images/about_us/parts.jpg"
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="hero my-20">
@@ -32,7 +33,7 @@ const About = () => {
           <p className="py-6">
           the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
           </p>
-          <button className="btn btn-orange ">Get More Info</button>
+          <Link to="/about"><button className="btn btn-orange ">Get More Info</button></Link>
           
         </div>
       </div>
