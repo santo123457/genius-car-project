@@ -97,7 +97,7 @@ async function run() {
           status: status,
         },
       };
-      const result = await orderCollection.updateOne(query,updatedDoc);
+      const result = await orderCollection.updateOne(query,updatedDoc);  
       res.send(result);
     });
 
