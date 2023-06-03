@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -9,11 +10,11 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div>
+    <div className="w-11/12 mx-auto">
       <div className="text-center">
         <p className="text-2xl font-bold text-orange-600">Services</p>
         <h2 className="text-5xl font-semibold">Our Service Area</h2>
-        <p className="py-5">
+        <p className="py-5 mb-10">
           the majority have suffered alteration in some form, by injected
           humour, or randomised <br />
           words which don't look even slightly believable.{" "}
@@ -24,9 +25,9 @@ const Services = () => {
           <ServiceCard key={service._id} service={service}></ServiceCard>
         ))}
       </div>
-      <button className="btn  btn-orange-outline my-10 m-auto block">
+      <Link to='/services'><button className="btn  btn-orange-outline my-10 m-auto block">
         More Services
-      </button>
+      </button></Link>
     </div>
   );
 };

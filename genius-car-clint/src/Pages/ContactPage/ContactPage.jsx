@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 lg:pb-16 px-4 mx-auto max-w-screen-md">
@@ -41,7 +41,6 @@ const Contact = () => {
               placeholder="Let us know how we can help you"
               required
             />
-            
           </div>
           <div className="sm:col-span-2">
             <label
@@ -57,10 +56,7 @@ const Contact = () => {
               placeholder="Leave a comment..."
             ></textarea>
           </div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-          >
+          <button type="submit" className="btn btn-primary">
             Send message
           </button>
         </form>
@@ -69,4 +65,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

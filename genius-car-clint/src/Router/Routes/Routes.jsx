@@ -6,11 +6,10 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import CheckOut from "../../Pages/CheckOut/CheckOut";
 import Orders from "../../Pages/Orders/Orders";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import Services from "../../Pages/Services/Services";
 import Blogs from "../../Pages/Blogs/Blogs";
-import Contact from "../../Pages/Contact/Contact";
+import ContactPage from "../../Pages/ContactPage/ContactPage";
 import AboutPage from "../../Pages/AboutPage/AboutPage";
-
+import ServicePage from "../../Pages/ServicePage/ServicePage";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Services></Services>,
+        element: <ServicePage></ServicePage>,
       },
       {
         path: "/blogs",
@@ -35,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <ContactPage></ContactPage>,
       },
       {
         path: "/login",

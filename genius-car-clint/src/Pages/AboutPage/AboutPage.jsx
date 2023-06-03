@@ -42,6 +42,20 @@ const AboutPage = () => {
   </div>
      <div className="hero my-32">
     <div className="hero-content flex-col lg:flex-row">
+    <div className="w-1/2 text-center mx-5">
+          
+          <h1 className="text-5xl font-bold py-5">
+            Our Workers <br />
+          </h1>
+          <p className="py-6">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+          </p>
+          <p className="py-6">
+          the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+          </p>
+         
+          
+        </div>
       <div className="relative w-1/2">
         <img
           src="https://www.nerdwallet.com/assets/blog/wp-content/uploads/2022/06/GettyImages-1343076140.jpg"
@@ -50,20 +64,7 @@ const AboutPage = () => {
         />
         
       </div>
-      <div className="w-1/2">
-          
-        <h1 className="text-5xl font-bold py-5">
-          Our Workers <br />
-        </h1>
-        <p className="py-6">
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
-        </p>
-        <p className="py-6">
-        the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
-        </p>
-       
-        
-      </div>
+      
     </div>
   </div>
    </div>
